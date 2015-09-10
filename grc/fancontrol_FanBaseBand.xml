@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<block>
+  <name>FanBaseBand</name>
+  <key>fancontrol_FanBaseBand</key>
+  <category>fancontrol</category>
+  <import>import fancontrol</import>
+  <make>fancontrol.FanBaseBand($samp_rate, $run, $channel, $light, $fan)</make>
+
+  <param>
+    <name>Samp_rate</name>
+    <key>samp_rate</key>
+    <type>real</type>
+  </param>
+  <param>
+    <name>Channel</name>
+    <key>channel</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Run</name>
+    <key>run</key>
+    <type>bool</type>
+    <option>
+      <name>True</name>
+      <key>True</key> 
+    </option>
+    <option>
+      <name>False</name>
+      <key>False</key> 
+    </option>
+  </param>
+  <param>
+    <name>Light</name>
+    <key>light</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Fan</name>
+    <key>fan</key>
+    <type>int</type>
+    <option>
+      <name>Low</name>
+      <key>0</key> 
+    </option>
+    <option>
+      <name>Medium</name>
+      <key>1</key> 
+    </option>
+    <option>
+      <name>High</name>
+      <key>2</key> 
+    </option>
+     <option>
+      <name>Off</name>
+      <key>3</key> 
+    </option>
+  </param>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
