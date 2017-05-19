@@ -100,8 +100,6 @@ std::vector<bool> FanPacket::getPacket() const {
         result.push_back(packet[i - 1]);
     }
 
-    std::cout << packet << '\n';
-
     return result;
 }
 
